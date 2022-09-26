@@ -8,7 +8,7 @@ router.post(
   "/api/users/signup",
   userSignupValidator,
   runValidation,
-  (req, res) => {
+  async(req, res) => {
     console.log("req.body: ", req.body);
     const { email, password } = req.body;
 
